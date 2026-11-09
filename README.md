@@ -32,7 +32,9 @@ gemeinsam. Ein Wechsel von Minecraft-Version oder Modloader bedeutet in der Rege
   `packwiz modrinth add --project-id <projekt-id> --version-id <versions-id>`.
   Nicht `packwiz modrinth install <name>` — das nimmt die neueste Version, ohne Zwei-Wochen-Regel.
 - Nur Server bzw. nur Client: in `mods/<name>.pw.toml` `side = "server"` / `"client"` setzen.
-- Danach immer `packwiz refresh` (aktualisiert `index.toml`).
+- Danach immer `packwiz refresh` (aktualisiert `index.toml`) — **unmittelbar vor jedem Commit**: packwiz
+  nimmt alle Dateien ins Pack auf, die nicht in `.packwizignore` stehen, und prüft deren Prüfsummen.
+  Dateien, die nicht zu den Spielern gehören (README), stehen in `.packwizignore`.
 - Lokal testen: `packwiz serve` → Pack unter `http://localhost:8080/pack.toml`.
 
 ## Prism Launcher (Mitspieler)
