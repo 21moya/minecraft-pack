@@ -1,0 +1,13 @@
+name = "Gemeinschaftsserver"
+author = "Gemeinschaftsprojekt"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "9c5f9f8dde49bc3db372e819380c2be12486d4668e858d69a358e187e3861535"
+
+[versions]
+fabric = "0.20.1"
+minecraft = "26.3"
