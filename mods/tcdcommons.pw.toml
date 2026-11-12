@@ -1,6 +1,6 @@
 name = "TCDCommons API"
 filename = "tcdcommons-3.12.8+neoforge-1.21.1-rev.1.jar"
-side = "client"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/Eldc1g37/versions/mro8KOYg/tcdcommons-3.12.8%2Bneoforge-1.21.1-rev.1.jar"

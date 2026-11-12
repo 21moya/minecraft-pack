@@ -32,7 +32,7 @@ Zusätze (von der Gruppe bestätigt):
 | Illager Invasion (+ Puzzles Lib) | v21.1.6 (21.1.66) | beide |
 | Mowzie's Mobs | 1.8.2 | beide |
 | RankBoard | 2.0.0 | nur Server |
-| Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client |
+| Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client (TCDCommons beidseitig: Pflicht-Netzkanal) |
 | Entity Model Features + Entity Texture Features (für Fresh Animations, fehlten im Pack der Gruppe) | 3.3.12 + 7.2.6 | nur Client |
 | Towns and Towers (+ Cristel Lib) | 1.13.11 (3.1.7) | beide |
 | Controlling (+ Searchables) — Suchfeld in der Tastenbelegung | 19.0.5 (1.0.2) | nur Client |
@@ -70,6 +70,7 @@ Configs:
   `packwiz modrinth add --project-id <projekt-id> --version-id <versions-id>`.
   Nicht `packwiz modrinth install <name>` — das nimmt die neueste Version, ohne Zwei-Wochen-Regel.
 - Nur Server bzw. nur Client: in `mods/<name>.pw.toml` `side = "server"` / `"client"` setzen.
+- Vorsicht bei `"client"`: Registriert die Mod einen Pflicht-Netzkanal, weist der Server Clients ab („channel … missing on the server side“). Prüfen: `unzip -p <jar> '*.class' | grep -a -c PayloadRegistrar`; bei Treffern ohne `optional` die Mod `"both"` setzen.
 - Danach immer `packwiz refresh` (aktualisiert `index.toml`) — **unmittelbar vor jedem Commit**: packwiz
   nimmt alle Dateien ins Pack auf, die nicht in `.packwizignore` stehen, und prüft deren Prüfsummen.
   Dateien, die nicht zu den Spielern gehören (README), stehen in `.packwizignore`.
