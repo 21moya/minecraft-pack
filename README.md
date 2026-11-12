@@ -6,27 +6,50 @@ ab; der Server ist auf einen bestimmten Commit festgelegt. Neue Stände gibt nur
 
 Enthält nur die Mod-Liste (Metadaten und Prüfsummen), keine Mod-Dateien und keine Geheimnisse.
 
-## Stand (Übergangs-Pack, 2026-11-12)
+## Stand („farm x winter“, 2026-11-12)
+
+Minecraft **1.21.1**, NeoForge **21.1.265** — NeoForge 1.21.1 wegen Create (Spec 2026-11-12 in gaming-infra).
+Grundlage ist das Pack der Gruppe „farm x winter 1.0.0“ (mrpack, Configs aus `overrides/config`), ohne
+Mebahel API / Elder Scrolls Core (dort Fabric-Dateien; die Kreaturen-Mods dazu gibt es nur für Fabric).
+Jede Version ist beim Pinnen mindestens **zwei Wochen** alt (Stichtag 2026-10-29). Deshalb eine Version älter als
+im Pack der Gruppe: Alex's Mobs Continued, Balm, CreativeCore, Easy Mob Farm, MezzConfig, Moonlight,
+Not Enough Animations, Snowy Spirit, SuperMartijn642's Core Lib, Traveler's Backpack, Fresh Animations (+ Extensions).
+
+Zusätze (von der Gruppe bestätigt):
 
 | | Version | Seite |
 |---|---|---|
-| Minecraft | 1.21.1 | |
-| NeoForge | 21.1.265 | |
-| MiniMOTD | 2.1.3 | nur Server |
-| Chunky | 1.4.23 | nur Server |
-| spark | 1.10.124-neoforge-1.21.1 | nur Server |
-| FerriteCore | 7.0.3-neoforge | beide |
-| ModernFix | 5.27.27+mc1.21.1 | beide |
-| Lithium | mc1.21.1-0.15.4-neoforge | beide |
+| Tectonic (+ Lithostitched) | 3.0.28-neoforge-21.1 (1.8.1-neoforge-21.1) | beide |
+| Terralith | 2.6.2 | beide |
+| Macaw's Roofs / Windows / Doors / Bridges | 2.3.2 / 2.4.2 / 1.1.5 / 3.1.2 | beide |
+| Macaw's Fences and Walls / Paths and Pavings / Lights and Lamps | 1.2.1 / 1.1.1 / 1.1.5 | beide |
+| Supplementaries | 1.21.1-4.0.2 | beide |
+| Another Furniture | 4.0.3 | beide |
+| Building Wands | 3.0.5 (Beta) | beide |
+| Xaero's World Map | 1.47.0 (passend zur Minimap 26.6.0) | beide |
+| Freecam | 1.3.0+mc1.21.1 | nur Client |
+| Serene Seasons (+ GlitchCore) | 10.1.0.9 (2.1.0.2) | beide |
+| Illager Invasion (+ Puzzles Lib) | v21.1.6 (21.1.66) | beide |
+| Mowzie's Mobs | 1.8.2 | beide |
+| RankBoard | 2.0.0 | nur Server |
+| Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client |
 
-NeoForge 1.21.1 wegen Create (Spec 2026-11-12 in gaming-infra). Dieses Übergangs-Pack enthält nur Server-Werkzeuge
-und MiniMOTD; das Pack der Gruppe („farm x winter“) folgt als normaler Abgleich, dann mit neuer Welt. Jede Version
-ist beim Pinnen mindestens **zwei Wochen** alt (Stichtag 2026-10-29; Krypton gibt es nicht für NeoForge).
+Server-Werkzeuge (aus dem Übergangs-Pack): MiniMOTD 2.1.3, Chunky 1.4.23, spark 1.10.124 (nur Server);
+FerriteCore 7.0.3, ModernFix 5.27.27, Lithium 0.15.4 (beide).
 
-`config/MiniMOTD/`: Server-Eintrag in der Mehrspieler-Liste — drei Varianten (Tag, Dämmerung, Nacht) mit Icons;
-der Server schaltet sie nach dem Sonnenstand um. `main.conf` und `plugin_settings.conf` sind `preserve` (packwiz
-legt sie einmal an und überschreibt sie danach nicht). Bei den Mitspielern liegen die Dateien ungenutzt im
-`config`-Ordner.
+Configs:
+
+- `config/xaero/`: Xaero-Lib ohne Internetzugriff (`allow_internet_access = false`); das erzwungene Server-Profil
+  der Minimap (`minimap/server_profiles/default.cfg`) schaltet Höhlenansicht und Radar ab.
+- Spieler-Einstellungen sind `preserve` (packwiz legt sie einmal an und überschreibt sie danach nicht): Sodium,
+  Iris, Xaero-Client-Profile, AmbientSounds, Not Enough Animations, Just Zoom, dazu `config/MiniMOTD/main.conf` und
+  `plugin_settings.conf`. `DistantHorizons.toml` bewusst nicht (Server-Drosselung muss ankommen).
+- `config/rankboard/`: nur abweichende Werte (Rest Standard der Mod) — Web-Dashboard aus (`web-enabled=false`,
+  öffentlich nur 25565), kein Avatar-Dienst, kein Menü bei Blick nach oben + Schleichen, Vanilla-Scoreboard „Tode“
+  bleibt unangetastet, deutsche Ranglisten-Namen.
+- `config/sodium-fingerprint.json` der Gruppe fehlt absichtlich (rechnerbezogene Kennung, ohne Nutzen).
+- `config/MiniMOTD/`: Server-Eintrag in der Mehrspieler-Liste — drei Varianten (Tag, Dämmerung, Nacht) mit
+  Icons; der Server schaltet sie nach dem Sonnenstand um. Bei den Mitspielern liegen die Dateien ungenutzt.
 
 ## Werkzeug
 

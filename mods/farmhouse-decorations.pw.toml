@@ -1,0 +1,13 @@
+name = "Farmhouse Decorations"
+filename = "fdm-26.9-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/fRCEQtWX/versions/c9OGcgnV/fdm-26.9-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "3dade3e658ea80787a25faee450fa8b7a052aad656f35164f426aa852d4f928516528b81ff913b1982cdcd3080840bdde7765e6203b535c7bcffac21ad1bcc57"
+
+[update]
+[update.modrinth]
+mod-id = "fRCEQtWX"
+version = "c9OGcgnV"

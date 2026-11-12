@@ -1,0 +1,13 @@
+name = "Enhanced Farming"
+filename = "Enhanced-Farming-1.21.1-6.0.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/7NG8HLUy/versions/Er7YEgM7/Enhanced-Farming-1.21.1-6.0.5.jar"
+hash-format = "sha512"
+hash = "ea054d4bf112a0a314c50d82e061300e69e135e0dd43f06fe1999bbf66f39782598a002475d9d39f8e831d4173b9ca5de35772c994f0c089cdd4fcde7c14aa08"
+
+[update]
+[update.modrinth]
+mod-id = "7NG8HLUy"
+version = "Er7YEgM7"

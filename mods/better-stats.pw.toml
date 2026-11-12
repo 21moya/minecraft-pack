@@ -1,0 +1,13 @@
+name = "Better Statistics Screen"
+filename = "betterstats-3.13.9+neoforge-1.21.1-rev.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/n6PXGAoM/versions/L2K41Cw5/betterstats-3.13.9%2Bneoforge-1.21.1-rev.1.jar"
+hash-format = "sha512"
+hash = "1cd361f217dc22d1b27efcb806ff323c32ba15a249dc9e378c7792265299e8761c96734c885727e9fbda0ed14ce5d86dc75a19c1450004795c3ed84045c70f5c"
+
+[update]
+[update.modrinth]
+mod-id = "n6PXGAoM"
+version = "L2K41Cw5"

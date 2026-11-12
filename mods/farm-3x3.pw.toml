@@ -1,0 +1,13 @@
+name = "Farm 3x3"
+filename = "farm-3x3-2.4.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/cNHrBKWb/versions/7UCRiZrD/farm-3x3-2.4.1.jar"
+hash-format = "sha512"
+hash = "df9b3d52e5d8d31193ef3ef583fd4742b186829742a0a93c641b8a03878694ffaf5bb6fda4119129a689a277f77abb3cdb6118e4b8f3fd089f7c1ff584f39881"
+
+[update]
+[update.modrinth]
+mod-id = "cNHrBKWb"
+version = "7UCRiZrD"

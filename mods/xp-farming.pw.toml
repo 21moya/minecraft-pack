@@ -1,0 +1,13 @@
+name = "XP Farming"
+filename = "xpfarming-1.2.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qDAFvJhV/versions/THzKfMox/xpfarming-1.2.0-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "a4449ab50cb06460d81f8e12a0a7fb4855ac05d7253775b86de73e0dfd18ab5951bfd68440c40bceb38589cc2bbab3292555856f7e4410f129403d6835ac1386"
+
+[update]
+[update.modrinth]
+mod-id = "qDAFvJhV"
+version = "THzKfMox"
