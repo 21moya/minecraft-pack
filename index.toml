@@ -545,11 +545,15 @@ hash = "1eecc5b541b94652f11619de138f2f958a71034e3466a7d7096f1b739060dce6"
 
 [[files]]
 file = "config/flywheel-client.toml"
-hash = "cf802bcdb805f78b2254eca13ab89f0d36a2404124eeb4e743019f011c981807"
+hash = "9a8019a2819cf8f27a30c0788b458ed7e9b6d749faea23d8feafa0424c4bb568"
 
 [[files]]
 file = "config/fml.toml"
 hash = "cc127c6067eb9e23289edc1c774afd71456456eef06c688af6731a72d3bba5e5"
+
+[[files]]
+file = "config/freecam.json5"
+hash = "9d649146be68b72a7f0e2ed0c24b9335a02a8ebc2b5bca6fcc639f0f3b5825a3"
 
 [[files]]
 file = "config/iris-excluded.json"
@@ -784,7 +788,7 @@ hash = "95c2d0eefb7c28ed40896dc4c6f6fe41687efc7753af8531c3320806d5410372"
 
 [[files]]
 file = "config/snowyspirit-common.toml"
-hash = "398465f5a271d24599439c5428da3a3bc7c8815ddbaceedb11c5796049183ad3"
+hash = "e7d7ed42688847e8a5766618ca96797d43c59b98ad0ae02268b96b99bcefcd31"
 
 [[files]]
 file = "config/sodium-mixins.properties"
@@ -914,6 +918,14 @@ preserve = true
 [[files]]
 file = "config/xaero/minimap/server_profiles/default.cfg"
 hash = "0eb2e2ca5ee85a1da64cf4f18f22e8ed916ab16cef50c4d8b049f6529f4f53eb"
+
+[[files]]
+file = "config/xaero/world-map/common.cfg"
+hash = "0c229eb0daf85bd09af51f21eeeb99497a3bd50a825d5ab1ca695fb21bf6cf9d"
+
+[[files]]
+file = "config/xaero/world-map/server_profiles/default.cfg"
+hash = "ef6cd61db7b1c94a4ab896693a3482240e41b27d93a3a0d95d1b22918d0630ba"
 
 [[files]]
 file = "config/xaerohud.txt"
