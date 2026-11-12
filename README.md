@@ -43,8 +43,10 @@ Solas 3.8, MakeUp Ultra Fast 9.6. Ressourcenpakete (nur Client, Aktivierung und 
 Whimscape r7 (+ Whimscape x Fresh Animations r4), Fresh Animations 1.11.1 (+ Extensions 1.8.1), Better Leaves 9.6,
 (Bee's) Fancy Crops 1.3.
 
-Server-Werkzeuge (aus dem Übergangs-Pack): MiniMOTD 2.1.3, Chunky 1.4.23, spark 1.10.124 (nur Server);
-FerriteCore 7.0.3, ModernFix 5.27.27, Lithium 0.15.4 (beide).
+Server-Werkzeuge (aus dem Übergangs-Pack): MiniMOTD 2.1.3, spark 1.10.124 (nur Server);
+FerriteCore 7.0.3, ModernFix 5.27.27, Lithium 0.15.4 (beide). Chunky 1.4.23 nur zum Vorgenerieren und nie zusammen
+mit Distant Horizons auf dem Server (DH 3.3.3 stürzt beim Start ab, DH-Issue #1329): dafür DH vorübergehend
+`side = "client"` (gaming-infra `docs/betrieb.md` „Pack ändern“ 6).
 
 Configs:
 
