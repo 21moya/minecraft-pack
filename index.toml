@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "d9e123eda5a2f8bc167e0740c0839779dc8824e8e2ea21934740c5b09c8f54a1"
+hash = "a9e9c16d6fc8b9fc0983494b932e8ac8def71b8a3092be99fe3505d8b94a7338"
 
 [[files]]
 file = "config/MiniMOTD/icons/daemmerung.png"
@@ -826,6 +826,10 @@ hash = "9962841ccc06487c97ec1d4bdac6a505fcbece925c978ff9b4e866f2ad6bab8d"
 [[files]]
 file = "config/spell_power/attributes.json"
 hash = "a027f8bb5b55291878216d97bb7e059e8aa542255dc23153dc207cd1e7469b27"
+
+[[files]]
+file = "config/tectonic.json"
+hash = "f8159cd49fec4f6faefa98cff420db36861d71bba7aaa0a55c898b860da75f09"
 
 [[files]]
 file = "config/transition.json"
