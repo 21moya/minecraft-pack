@@ -1,0 +1,13 @@
+name = "Whimscape x Fresh Animations"
+filename = "Whimscape_x_FreshAnimations_1.20-1.21.11_r4.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/NbmssBLT/versions/opqxUjvt/Whimscape_x_FreshAnimations_1.20-1.21.11_r4.zip"
+hash-format = "sha512"
+hash = "2d0690b9d9d13b5b07f4af3c27415bbf9a7fd148a504fbd11d3c8775549484ccbe0741e41f06dc986cddaf15bcae0a3417ddd3500ec2a6b49e24435a8180f9fa"
+
+[update]
+[update.modrinth]
+mod-id = "NbmssBLT"
+version = "opqxUjvt"

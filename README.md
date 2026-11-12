@@ -33,6 +33,14 @@ Zusätze (von der Gruppe bestätigt):
 | Mowzie's Mobs | 1.8.2 | beide |
 | RankBoard | 2.0.0 | nur Server |
 | Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client |
+| Entity Model Features + Entity Texture Features (für Fresh Animations, fehlten im Pack der Gruppe) | 3.3.12 + 7.2.6 | nur Client |
+| Towns and Towers (+ Cristel Lib) | 1.13.11 (3.1.7) | beide |
+| Open Together, Easy Anvils, Diagonal Fences, Visual Workbench, Horse Expert (alle Fuzs, Puzzles Lib) | 21.1.2, v21.1.0, v21.1.1, 21.1.2, v21.1.0 | beide |
+
+Shader (nur Client, jeder wählt selbst): Complementary Reimagined r5.9.3 und Unbound r5.9.3, BSL 10.1.8, Photon v1.4,
+Solas 3.8, MakeUp Ultra Fast 9.6. Ressourcenpakete (nur Client, Aktivierung und Reihenfolge laut Freunde-Anleitung):
+Whimscape r7 (+ Whimscape x Fresh Animations r4), Fresh Animations 1.11.1 (+ Extensions 1.8.1), Better Leaves 9.6,
+(Bee's) Fancy Crops 1.3.
 
 Server-Werkzeuge (aus dem Übergangs-Pack): MiniMOTD 2.1.3, Chunky 1.4.23, spark 1.10.124 (nur Server);
 FerriteCore 7.0.3, ModernFix 5.27.27, Lithium 0.15.4 (beide).
