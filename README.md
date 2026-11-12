@@ -35,6 +35,7 @@ Zusätze (von der Gruppe bestätigt):
 | Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client |
 | Entity Model Features + Entity Texture Features (für Fresh Animations, fehlten im Pack der Gruppe) | 3.3.12 + 7.2.6 | nur Client |
 | Towns and Towers (+ Cristel Lib) | 1.13.11 (3.1.7) | beide |
+| Controlling (+ Searchables) — Suchfeld in der Tastenbelegung | 19.0.5 (1.0.2) | nur Client |
 | Open Together, Easy Anvils, Diagonal Fences, Visual Workbench, Horse Expert (alle Fuzs, Puzzles Lib) | 21.1.2, v21.1.0, v21.1.1, 21.1.2, v21.1.0 | beide |
 
 Shader (nur Client, jeder wählt selbst): Complementary Reimagined r5.9.3 und Unbound r5.9.3, BSL 10.1.8, Photon v1.4,
