@@ -528,6 +528,10 @@ file = "config/easy_mob_farm/mob_farm_bonus.cfg"
 hash = "c911fe055c12e8baa4a41b5a8ff30aec7fb671cc4f2f42f0dd83662f2c52fff1"
 
 [[files]]
+file = "config/easyanvils-server.toml"
+hash = "390375fc4d5d0af3b2d8e2b512fc848d95e494d22f8b851e5131c9596035e52c"
+
+[[files]]
 file = "config/enhancedfarming-common.toml"
 hash = "0510bf8d4e0073a3bf073b6be8cd406ff4195ad81fe1466d3d505215908eefcd"
 
