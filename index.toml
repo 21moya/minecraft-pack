@@ -1,31 +1,65 @@
 hash-format = "sha256"
 
 [[files]]
-file = "mods/chunky.pw.toml"
-hash = "c3e4fe1c4469a4cbad5fc201fe7083166b6bf3cab7edb23398a317b4c29bd727"
-metafile = true
+file = "config/MiniMOTD/icons/daemmerung.png"
+hash = "fa216a294a32804a30037bd8c6aaa0da8fe7676e3ad124ce50cf57dc1a5f0107"
 
 [[files]]
-file = "mods/fabric-api.pw.toml"
-hash = "a4c31d16582621909eba9f06a34f03114d212c7e684c8dbc9991fb12a42e043b"
+file = "config/MiniMOTD/icons/nacht.png"
+hash = "fcf7708b105f73c4f33884e535ce74b6b94478ee0cd6d15f30e387ad8c7e9c1a"
+
+[[files]]
+file = "config/MiniMOTD/icons/tag.png"
+hash = "7d2dfd2a63b9dc02e81281e262d03fb3169ed52cef32b8fa4bad34a4298cd70f"
+
+[[files]]
+file = "config/MiniMOTD/main.conf"
+hash = "6a84a20b418b3dfed1f1c6c363561407f00527817cd78d46f87d43bb296f275f"
+preserve = true
+
+[[files]]
+file = "config/MiniMOTD/plugin_settings.conf"
+hash = "1c88354c52fc1a5e5ff3747023373e51cdc4dfaaeda4730898c432deeeff9657"
+preserve = true
+
+[[files]]
+file = "config/MiniMOTD/varianten/daemmerung.conf"
+hash = "f6ccb77da912de220aa91792616916a6cf7c975eaa4055d31d2e565963051cef"
+
+[[files]]
+file = "config/MiniMOTD/varianten/nacht.conf"
+hash = "6a84a20b418b3dfed1f1c6c363561407f00527817cd78d46f87d43bb296f275f"
+
+[[files]]
+file = "config/MiniMOTD/varianten/tag.conf"
+hash = "fd6e36ac36228d3c12f382c9b014dca78af9268091f0ae7222991f3c26fd56a8"
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
 metafile = true
 
 [[files]]
 file = "mods/ferrite-core.pw.toml"
-hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
-metafile = true
-
-[[files]]
-file = "mods/krypton.pw.toml"
-hash = "4d8432eed6984a86acf6c9f056755b3f9082eb8fcb5b3f37e96498e7871e40c9"
+hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "a39389e4c813b70b984a0c8aed769825b32c321ee0b9aed1151d92cb38f77357"
+hash = "51e129832b04acd57da470fc41725bad5e101b6a6b1d4901fd8ea7a92b14e13d"
+metafile = true
+
+[[files]]
+file = "mods/minimotd.pw.toml"
+hash = "8997bdf6fd1716cd5498c48621944a97993189beebc897039d22fe4d9ae79c98"
+metafile = true
+
+[[files]]
+file = "mods/modernfix.pw.toml"
+hash = "ef65836e005bd42a0f40df30a94eba1ad7ee5ed3194b11eafbeadc64edb44252"
 metafile = true
 
 [[files]]
 file = "mods/spark.pw.toml"
-hash = "43bdce478a1b421f2fe0718b2b5aea0624833340970c9621ff56ed00b0fc44c0"
+hash = "5995decc8738d7ddccec218dfa1ed95db9eca5bb64c98fd2cede8bf9bbc837c2"
 metafile = true

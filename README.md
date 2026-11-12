@@ -1,28 +1,32 @@
 # minecraft-pack
 
-Mod-Pack (Fabric, [packwiz](https://packwiz.infra.link/)) für einen privaten Minecraft-Gemeinschaftsserver.
+Mod-Pack (NeoForge, [packwiz](https://packwiz.infra.link/)) für einen privaten Minecraft-Gemeinschaftsserver.
 Der Prism Launcher der Mitspieler gleicht die Mods bei jedem Start automatisch mit dem Branch `live`
 ab; der Server ist auf einen bestimmten Commit festgelegt. Neue Stände gibt nur der Server-Admin frei.
 
 Enthält nur die Mod-Liste (Metadaten und Prüfsummen), keine Mod-Dateien und keine Geheimnisse.
 
-## Stand (Start-Pack, 2026-11-09)
+## Stand (Übergangs-Pack, 2026-11-12)
 
 | | Version | Seite |
 |---|---|---|
-| Minecraft | 26.3 | |
-| Fabric Loader | 0.20.1 | |
-| Fabric API | 0.165.0+26.3 | beide |
-| Lithium | mc26.3-0.26.2-fabric | beide |
-| FerriteCore | 9.0.0-fabric | beide |
-| Krypton | 0.3.2 | beide |
-| spark | 1.10.187-fabric | nur Server |
-| Chunky | 1.5.3 | nur Server |
+| Minecraft | 1.21.1 | |
+| NeoForge | 21.1.265 | |
+| MiniMOTD | 2.1.3 | nur Server |
+| Chunky | 1.4.23 | nur Server |
+| spark | 1.10.124-neoforge-1.21.1 | nur Server |
+| FerriteCore | 7.0.3-neoforge | beide |
+| ModernFix | 5.27.27+mc1.21.1 | beide |
+| Lithium | mc1.21.1-0.15.4-neoforge | beide |
 
-Auswahlregel: neueste Minecraft-Version, für die **alle** Mods eine Fabric-Version haben, die mindestens
-**zwei Wochen** alt ist (Stichtag beim Start: 2026-10-26; Chunky deshalb 1.5.3 statt 1.5.66). Das
-Start-Pack enthält nur Performance- und Server-Werkzeuge; die eigentlichen Mods wählt die Gruppe
-gemeinsam. Ein Wechsel von Minecraft-Version oder Modloader bedeutet in der Regel eine neue Welt.
+NeoForge 1.21.1 wegen Create (Spec 2026-11-12 in gaming-infra). Dieses Übergangs-Pack enthält nur Server-Werkzeuge
+und MiniMOTD; das Pack der Gruppe („farm x winter“) folgt als normaler Abgleich, dann mit neuer Welt. Jede Version
+ist beim Pinnen mindestens **zwei Wochen** alt (Stichtag 2026-10-29; Krypton gibt es nicht für NeoForge).
+
+`config/MiniMOTD/`: Server-Eintrag in der Mehrspieler-Liste — drei Varianten (Tag, Dämmerung, Nacht) mit Icons;
+der Server schaltet sie nach dem Sonnenstand um. `main.conf` und `plugin_settings.conf` sind `preserve` (packwiz
+legt sie einmal an und überschreibt sie danach nicht). Bei den Mitspielern liegen die Dateien ungenutzt im
+`config`-Ordner.
 
 ## Werkzeug
 
@@ -39,7 +43,7 @@ gemeinsam. Ein Wechsel von Minecraft-Version oder Modloader bedeutet in der Rege
 
 ## Prism Launcher (Mitspieler)
 
-Instanz mit Minecraft und Fabric Loader wie oben; `packwiz-installer-bootstrap.jar` in den
+Instanz mit Minecraft 1.21.1 und NeoForge 21.1.265; `packwiz-installer-bootstrap.jar` in den
 `minecraft`-Ordner der Instanz; *Instanz bearbeiten → Einstellungen → Eigene Befehle*, Pre-Launch-Befehl:
 
 ```
