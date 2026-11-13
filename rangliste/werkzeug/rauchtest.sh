@@ -7,7 +7,9 @@ export JAVA_HOME="${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk}"
 
 RUN=run
 LOG=$RUN/logs/latest.log
-RCON=(python3 werkzeug/rcon.py 127.0.0.1 25576 nurlokal)
+# RCON-Passwort pro Lauf zufällig (Dev-Server nur auf 127.0.0.1; kein fester Wert im Repo).
+PASSWORT=$(python3 -c 'import secrets; print(secrets.token_hex(12))')
+RCON=(python3 werkzeug/rcon.py 127.0.0.1 25576 "$PASSWORT")
 
 mkdir -p "$RUN/world/stats" "$RUN/logs"
 echo 'eula=true' > "$RUN/eula.txt"
@@ -16,7 +18,6 @@ server-ip=127.0.0.1
 server-port=25570
 enable-rcon=true
 rcon.port=25576
-rcon.password=nurlokal
 level-type=minecraft\:flat
 generate-structures=false
 online-mode=false
@@ -24,6 +25,7 @@ view-distance=4
 simulation-distance=4
 max-players=1
 PROPS
+echo "rcon.password=$PASSWORT" >> "$RUN/server.properties"
 # Testdaten: ein Spieler, den der Server nicht kennt (Name = UUID-Anfang), plus eine kaputte Datei.
 cat > "$RUN/world/stats/00000000-0000-0000-0000-000000000001.json" <<'JSON'
 {"stats":{"minecraft:custom":{"minecraft:play_time":885600,"minecraft:animals_bred":0}},"DataVersion":3955}
