@@ -39,6 +39,10 @@ file = "config/MiniMOTD/varianten/tag.conf"
 hash = "fd6e36ac36228d3c12f382c9b014dca78af9268091f0ae7222991f3c26fd56a8"
 
 [[files]]
+file = "config/MiniMOTD/varianten/wartung.conf"
+hash = "004cf05eb4fdd30b956962bd4e452dbe1f28a364b50e631c02679c7e8cb617d3"
+
+[[files]]
 file = "config/aeronautics-server.toml"
 hash = "733a50c4a935c18257572c88cf0df06e85978671930984248d4dac1ffdfb6b19"
 
