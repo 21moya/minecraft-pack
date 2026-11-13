@@ -12,15 +12,33 @@ import java.util.Set;
  */
 public final class SeitenStand {
     public static final int MAX_EINTRAEGE = 10;
+    /**
+     * Name des Objectives auf dem Client. Enthält ein Zeichen, das {@code /scoreboard objectives add} nicht erlaubt:
+     * so kann kein per Befehl angelegtes Objective gleich heißen (doppeltes Anlegen = Rauswurf).
+     */
+    public static final String OBJECTIVE = "rangliste:ansicht";
 
     private boolean angelegt;
     private Set<String> besitzer = new HashSet<>();
 
+    /** Auf ausdrücklichen Wunsch zeigen: holt den Platz rechts zurück, falls etwas anderes ihn belegt hat. */
     public List<SeitenOp> zeige(Wert w, List<Platz> top) {
+        return baue(w, top, true);
+    }
+
+    /** Regelmäßige Aktualisierung: verdrängt keine fremde Anzeige rechts. */
+    public List<SeitenOp> aktualisiere(Wert w, List<Platz> top) {
+        return baue(w, top, false);
+    }
+
+    private List<SeitenOp> baue(Wert w, List<Platz> top, boolean anzeigen) {
         List<SeitenOp> ops = new ArrayList<>();
         String titel = Texte.titel(w);
         if (angelegt) {
             ops.add(new SeitenOp.Aendern(titel));
+            if (anzeigen) {
+                ops.add(new SeitenOp.Anzeigen());
+            }
         } else {
             ops.add(new SeitenOp.Anlegen(titel));
             ops.add(new SeitenOp.Anzeigen());

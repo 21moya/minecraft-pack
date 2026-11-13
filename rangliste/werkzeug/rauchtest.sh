@@ -29,6 +29,8 @@ cat > "$RUN/world/stats/00000000-0000-0000-0000-000000000001.json" <<'JSON'
 {"stats":{"minecraft:custom":{"minecraft:play_time":885600,"minecraft:animals_bred":0}},"DataVersion":3955}
 JSON
 printf '{' > "$RUN/world/stats/kaputt.json"
+# Kaputte Datei mit gültigem UUID-Namen: muss gelesen, als ungültig gemeldet und übersprungen werden.
+printf '{' > "$RUN/world/stats/00000000-0000-0000-0000-00000000000f.json"
 : > "$LOG"
 
 ./gradlew runServer > "$RUN/rauchtest-gradle.log" 2>&1 &
@@ -43,6 +45,10 @@ for _ in $(seq 1 300); do
   sleep 1
 done
 grep -q 'Done (' "$LOG" || { echo 'ABBRUCH: Server nach 300 s nicht bereit'; exit 1; }
+
+fehlerzeilen() {
+  grep -c -E '^[[:space:]]+at farmxwinter\.rangliste|ERROR.*[Rr]angliste' "$1" || true
+}
 
 pruefe() {
   local befehl=$1; shift
@@ -67,8 +73,11 @@ pruefe 'rangliste ansicht aus' 'Das geht nur als Spieler im Spiel.'
 wait "$PID" || true
 trap - EXIT
 
-fehler=$(grep -E 'Exception|ERROR' "$LOG" | grep -c -i rangliste || true)
+# Stacktrace-Zeilen der Mod („at farmxwinter.rangliste…“) oder ERROR-Zeilen, die sie nennen.
+fehler=$(fehlerzeilen "$LOG")
 if [ "$fehler" != 0 ]; then
-  echo "ABBRUCH: $fehler Fehlerzeilen mit 'rangliste' im Log"; grep -E 'Exception|ERROR' "$LOG" | grep -i rangliste | head; exit 1
+  echo "ABBRUCH: $fehler Fehlerzeilen der Mod im Log"; grep -E '^[[:space:]]+at farmxwinter\.rangliste|ERROR.*[Rr]angliste' "$LOG" | head; exit 1
 fi
+grep -q 'Statistik-Datei 00000000-0000-0000-0000-00000000000f.json übersprungen' "$LOG" \
+  || { echo 'ABBRUCH: kaputte Statistik-Datei nicht gemeldet'; exit 1; }
 echo 'RAUCHTEST OK'

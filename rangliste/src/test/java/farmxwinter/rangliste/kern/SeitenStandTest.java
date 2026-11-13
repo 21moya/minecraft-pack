@@ -67,6 +67,38 @@ class SeitenStandTest {
     }
 
     @Test
+    void erneutesEinschaltenZeigtWiederRechts() {
+        SeitenStand st = new SeitenStand();
+        st.zeige(Wert.SPIELZEIT, List.of());
+        List<SeitenOp> ops = st.zeige(Wert.TODE, List.of());
+        assertTrue(ops.contains(new SeitenOp.Anzeigen()));          // holt den Platz rechts zurück
+        assertFalse(ops.stream().anyMatch(o -> o instanceof SeitenOp.Anlegen));
+    }
+
+    @Test
+    void aktualisierenVerdraengtNichts() {
+        SeitenStand st = new SeitenStand();
+        st.zeige(Wert.TODE, List.of());
+        List<SeitenOp> ops = st.aktualisiere(Wert.TODE, List.of(new Platz(1, A, "Anna", 3)));
+        assertFalse(ops.contains(new SeitenOp.Anzeigen()));
+        assertTrue(ops.contains(new SeitenOp.Aendern("Rangliste: Tode")));
+        assertTrue(ops.contains(new SeitenOp.Setzen("Anna", 3, "Anna", "3")));
+    }
+
+    @Test
+    void aktualisierenOhneAnlageLegtAn() {
+        List<SeitenOp> ops = new SeitenStand().aktualisiere(Wert.TODE, List.of());
+        assertEquals(new SeitenOp.Anlegen("Rangliste: Tode"), ops.get(0));
+        assertEquals(new SeitenOp.Anzeigen(), ops.get(1));
+    }
+
+    @Test
+    void objectiveNameNichtPerBefehlAnlegbar() {
+        // /scoreboard objectives add erlaubt nur diese Zeichen; ein anderes schließt eine Kollision aus.
+        assertFalse(SeitenStand.OBJECTIVE.matches("[0-9A-Za-z_.+-]+"), SeitenStand.OBJECTIVE);
+    }
+
+    @Test
     void punkteBegrenzt() {
         assertEquals(Integer.MAX_VALUE, SeitenStand.punkte(5_000_000_000L));
         assertEquals(0, SeitenStand.punkte(-3));

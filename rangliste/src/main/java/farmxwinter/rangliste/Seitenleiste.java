@@ -32,7 +32,6 @@ import net.minecraft.world.scores.criteria.ObjectiveCriteria;
  * Nur Server-Thread.
  */
 final class Seitenleiste {
-    private static final String NAME = "rangliste";
     /** Aktualisierung alle 10 Sekunden. */
     private static final int TAKT = 200;
 
@@ -95,7 +94,7 @@ final class Seitenleiste {
             Map<UUID, StatSheet> daten = alle;
             List<Platz> top = tops.computeIfAbsent(w.get(),
                     x -> Rangliste.berechne(StatQuellen.werte(daten, x), id -> StatQuellen.name(server, id)));
-            sende(spieler, stand(spieler).zeige(w.get(), top));
+            sende(spieler, stand(spieler).aktualisiere(w.get(), top));
         }
     }
 
@@ -118,16 +117,16 @@ final class Seitenleiste {
             case SeitenOp.Anzeigen a -> new ClientboundSetDisplayObjectivePacket(DisplaySlot.SIDEBAR, objective(""));
             case SeitenOp.Entfernen e ->
                     new ClientboundSetObjectivePacket(objective(""), ClientboundSetObjectivePacket.METHOD_REMOVE);
-            case SeitenOp.Setzen s -> new ClientboundSetScorePacket(s.besitzer(), NAME, s.punkte(),
+            case SeitenOp.Setzen s -> new ClientboundSetScorePacket(s.besitzer(), SeitenStand.OBJECTIVE, s.punkte(),
                     Optional.of(Component.literal(s.anzeige())),
                     Optional.of(new FixedFormat(Component.literal(s.wertText()))));
-            case SeitenOp.Loeschen l -> new ClientboundResetScorePacket(l.besitzer(), NAME);
+            case SeitenOp.Loeschen l -> new ClientboundResetScorePacket(l.besitzer(), SeitenStand.OBJECTIVE);
         };
     }
 
     /** Objective nur als Paketinhalt; es wird in keinem Scoreboard registriert. */
     private static Objective objective(String titel) {
-        return new Objective(new Scoreboard(), NAME, ObjectiveCriteria.DUMMY,
+        return new Objective(new Scoreboard(), SeitenStand.OBJECTIVE, ObjectiveCriteria.DUMMY,
                 Component.literal(titel).withStyle(ChatFormatting.GOLD), ObjectiveCriteria.RenderType.INTEGER, false,
                 null);
     }
