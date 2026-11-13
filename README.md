@@ -31,7 +31,7 @@ Zusätze (von der Gruppe bestätigt):
 | Serene Seasons (+ GlitchCore) | 10.1.0.9 (2.1.0.2) | beide |
 | Illager Invasion (+ Puzzles Lib) | v21.1.6 (21.1.66) | beide |
 | Mowzie's Mobs | 1.8.2 | beide |
-| RankBoard | 2.0.0 | nur Server |
+| Rangliste — eigene Mod, Quellcode `rangliste/` (ersetzt RankBoard, 2026-11-13) | 1.0.0 | nur Server |
 | Better Statistics Screen (+ TCDCommons) | 3.13.9+neoforge-1.21.1-rev.1 (3.12.8 rev.1) | nur Client (TCDCommons beidseitig: Pflicht-Netzkanal) |
 | Entity Model Features + Entity Texture Features (für Fresh Animations, fehlten im Pack der Gruppe) | 3.3.12 + 7.2.6 | nur Client |
 | Towns and Towers (+ Cristel Lib) | 1.13.11 (3.1.7) | beide |
@@ -55,9 +55,6 @@ Configs:
 - Spieler-Einstellungen sind `preserve` (packwiz legt sie einmal an und überschreibt sie danach nicht): Sodium,
   Iris, Xaero-Client-Profile, AmbientSounds, Not Enough Animations, Just Zoom, dazu `config/MiniMOTD/main.conf` und
   `plugin_settings.conf`. `DistantHorizons.toml` bewusst nicht (Server-Drosselung muss ankommen).
-- `config/rankboard/`: nur abweichende Werte (Rest Standard der Mod) — Web-Dashboard aus (`web-enabled=false`,
-  öffentlich nur 25565), kein Avatar-Dienst, kein Menü bei Blick nach oben + Schleichen, Vanilla-Scoreboard „Tode“
-  bleibt unangetastet, deutsche Ranglisten-Namen.
 - `config/sodium-fingerprint.json` der Gruppe fehlt absichtlich (rechnerbezogene Kennung, ohne Nutzen).
 - `config/MiniMOTD/`: Server-Eintrag in der Mehrspieler-Liste — drei Varianten (Tag, Dämmerung, Nacht) mit
   Icons; der Server schaltet sie nach dem Sonnenstand um. Bei den Mitspielern liegen die Dateien ungenutzt.
@@ -75,6 +72,18 @@ Configs:
   nimmt alle Dateien ins Pack auf, die nicht in `.packwizignore` stehen, und prüft deren Prüfsummen.
   Dateien, die nicht zu den Spielern gehören (README), stehen in `.packwizignore`.
 - Lokal testen: `packwiz serve` → Pack unter `http://localhost:8080/pack.toml`.
+
+## Eigene Mod „Rangliste“
+
+- Quellcode in `rangliste/` (NeoForge 1.21.1, nur Server, nur Vanilla-Pakete, kein Netzkanal). Befehle:
+  `/rangliste`, `/rangliste <wert>`, `/rangliste ich`, `/rangliste ansicht <wert>|aus`.
+- Bauen und prüfen (JDK 21, Paket `jdk21-openjdk`):
+  `cd rangliste && JAVA_HOME=/usr/lib/jvm/java-21-openjdk ./gradlew build && bash werkzeug/rauchtest.sh`
+  (Unit-Tests + Dev-Server mit RCON auf 127.0.0.1; Erwartung `RAUCHTEST OK`).
+- Ausliefern: `build/libs/rangliste-<version>.jar` nach `extern/` kopieren, in `mods/rangliste.pw.toml` Dateiname,
+  URL und `sha512sum` eintragen. **Dateien in `extern/` nie überschreiben oder löschen** — neue Version = neuer
+  Dateiname; ältere Pack-Stände (Rückweg) laden ihre Datei über `raw.githubusercontent.com/…/main/extern/…`.
+- `rangliste/` und `extern/` stehen in `.packwizignore` (sonst landeten sie auf den Clients).
 
 ## Prism Launcher (Mitspieler)
 

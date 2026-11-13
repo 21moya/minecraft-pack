@@ -1,0 +1,8 @@
+name = "Rangliste"
+filename = "rangliste-1.0.0.jar"
+side = "server"
+
+[download]
+url = "https://raw.githubusercontent.com/21moya/minecraft-pack/main/extern/rangliste-1.0.0.jar"
+hash-format = "sha512"
+hash = "3166c5dd66e5c1ac325802e569195255217c38ac5c56e9a5234143e6bd0174cc276e8776e3abcbdd984eb6c570a14731cfca398996a3a7ea39db6839b7dbe6a1"

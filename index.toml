@@ -719,14 +719,6 @@ file = "config/ponder-client.toml"
 hash = "57fe579bf4cdbcab6c6702dc0dad2727b899f07f28fea686bca1e4b25b20bbfb"
 
 [[files]]
-file = "config/rankboard/rankboard-web.properties"
-hash = "1d7fdd29d898e0837fe917553d992630091d772de73d58a63a932c583053f9b2"
-
-[[files]]
-file = "config/rankboard/rankboard.properties"
-hash = "af902c8de89158374ebcc867b13562ff4f3dde62ec826d0b335c462439dfa939"
-
-[[files]]
 file = "config/rogues/effects.json"
 hash = "5427ca4a0115db731f65ed2a0e4ccd61b33985bd1d86466ca0759b4fc3a1da5b"
 
@@ -1310,8 +1302,8 @@ hash = "0a7c847cf1bacf6b9756f348a05271c6ff57fad00d1f9d2991ea302f8453340b"
 metafile = true
 
 [[files]]
-file = "mods/rankboard.pw.toml"
-hash = "a8906dcbd3e600ed184998946021d23cd1e0644579542eec43264c9edcbd3fd9"
+file = "mods/rangliste.pw.toml"
+hash = "998362c3a5cdf8c488e8aac5679034542387d0b809479cd06bad1c4a47a853fe"
 metafile = true
 
 [[files]]
