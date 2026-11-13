@@ -724,7 +724,7 @@ hash = "1d7fdd29d898e0837fe917553d992630091d772de73d58a63a932c583053f9b2"
 
 [[files]]
 file = "config/rankboard/rankboard.properties"
-hash = "d4e833dde96a02e4ed30265a1ddfa6c443204379ec2e56b5fa56ea0ee22e8c31"
+hash = "af902c8de89158374ebcc867b13562ff4f3dde62ec826d0b335c462439dfa939"
 
 [[files]]
 file = "config/rogues/effects.json"
