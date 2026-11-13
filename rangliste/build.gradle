@@ -1,0 +1,40 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = '1.0.0'
+group = 'farmxwinter'
+base { archivesName = 'rangliste' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = '21.1.265'
+    runs {
+        server {
+            server()
+        }
+    }
+    mods {
+        rangliste {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Gson kommt im Spiel mit Minecraft (1.21.1: 2.10.1); die Unit-Tests bekommen es nicht automatisch.
+    testRuntimeOnly 'com.google.code.gson:gson:2.10.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}

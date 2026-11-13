@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="rangliste"
+version="1.0.0"
+displayName="Rangliste"
+authors="farm x winter"
+description='''Ranglisten aus den Minecraft-Statistiken, auf Deutsch.'''
+# Nur Server: Clients ohne diese Mod sehen den Server weiterhin als passend.
+displayTest="IGNORE_SERVER_VERSION"
+
+[[dependencies.rangliste]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.265,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.rangliste]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
