@@ -46,8 +46,7 @@ Whimscape r7 (+ Whimscape x Fresh Animations r4), Fresh Animations 1.11.1 (+ Ext
 Server-Werkzeuge (aus dem Übergangs-Pack): MiniMOTD 2.1.3, spark 1.10.124 (nur Server);
 FerriteCore 7.0.3, ModernFix 5.27.27, Lithium 0.15.4 (beide). Chunky 1.4.23 nur zum Vorgenerieren und nie zusammen
 mit Distant Horizons auf dem Server (DH 3.3.3 stürzt beim Start ab, DH-Issue #1329): dafür DH vorübergehend
-`side = "client"` (gaming-infra `docs/betrieb.md` „Pack ändern“ 6). **Derzeit (2026-11-13) so:** Chunky drin, DH nur
-Client, solange die neue Welt `farmxwinter2` vorgeneriert wird.
+`side = "client"` (gaming-infra `docs/betrieb.md` „Pack ändern“ 6).
 
 Configs:
 
