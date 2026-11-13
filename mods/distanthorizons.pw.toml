@@ -1,3 +1,4 @@
+# 2026-11-13: Kommentar ändert den Hash, damit der Server-Installer die Jar nach Phase 1 (side client) wieder holt (gaming-infra betrieb.md „Pack ändern“ 6).
 name = "Distant Horizons"
 filename = "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar"
 side = "both"
