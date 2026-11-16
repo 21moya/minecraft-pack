@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "a9e9c16d6fc8b9fc0983494b932e8ac8def71b8a3092be99fe3505d8b94a7338"
+hash = "16cb8f05149dea732fe1411ba13ecb77faf5c3400af179aab2766bbe927f1c96"
 
 [[files]]
 file = "config/MiniMOTD/icons/daemmerung.png"
